@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "portfolio.schema.json",
+  "title": "Portfolio",
+  "description": "A named portfolio containing one or more mutual funds, each with stock holdings.",
+  "type": "object",
+  "required": ["portfolioName", "funds"],
+  "properties": {
+    "portfolioName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique name for the portfolio."
+    },
+    "funds": {
+      "type": "array",
+      "minItems": 1,
+      "description": "One or more funds in the portfolio.",
+      "items": {
+        "$ref": "#/$defs/fund"
+      }
+    }
+  },
+  "$defs": {
+    "fund": {
+      "type": "object",
+      "required": ["name", "value", "holdings"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique name of the fund."
+        },
+        "value": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Total value of the fund in INR."
+        },
+        "holdings": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Stock holdings within the fund. Weights must sum to 100.",
+          "items": {
+            "$ref": "#/$defs/holding"
+          }
+        }
+      }
+    },
+    "holding": {
+      "type": "object",
+      "required": ["stockSymbol", "weight", "sector"],
+      "properties": {
+        "stockSymbol": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stock ticker symbol (e.g. INFY, HDFCBANK)."
+        },
+        "weight": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 100,
+          "description": "Percentage weight of this stock in the fund."
+        },
+        "sector": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Sector classification (e.g. IT, Banking, FMCG)."
+        }
+      }
+    }
+  }
+}

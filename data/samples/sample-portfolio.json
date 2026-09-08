@@ -1,0 +1,68 @@
+{
+  "portfolioName": "Sample Portfolio",
+  "funds": [
+    {
+      "name": "Fund A",
+      "value": 1000000,
+      "holdings": [
+        {
+          "stockSymbol": "ITC",
+          "weight": 20,
+          "sector": "FMCG"
+        },
+        {
+          "stockSymbol": "INFY",
+          "weight": 30,
+          "sector": "IT"
+        },
+        {
+          "stockSymbol": "HDFCBANK",
+          "weight": 50,
+          "sector": "Banking"
+        }
+      ]
+    },
+    {
+      "name": "Fund B",
+      "value": 1000000,
+      "holdings": [
+        {
+          "stockSymbol": "INFY",
+          "weight": 40,
+          "sector": "IT"
+        },
+        {
+          "stockSymbol": "RELIANCE",
+          "weight": 30,
+          "sector": "Energy"
+        },
+        {
+          "stockSymbol": "HDFCBANK",
+          "weight": 30,
+          "sector": "Banking"
+        }
+      ]
+    },
+    {
+      "name": "Fund C",
+      "value": 500000,
+      "holdings": [
+        {
+          "stockSymbol": "TCS",
+          "weight": 50,
+          "sector": "IT"
+        },
+        {
+          "stockSymbol": "INFY",
+          "weight": 30,
+          "sector": "IT"
+        },
+        {
+          "stockSymbol": "ITC",
+          "weight": 20,
+          "sector": "FMCG"
+        }
+      ]
+    }
+  ]
+}

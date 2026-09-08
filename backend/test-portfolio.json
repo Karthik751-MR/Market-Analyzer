@@ -1,0 +1,21 @@
+{
+  "portfolioName": "Test Portfolio",
+  "funds": [
+    {
+      "name": "Fund A",
+      "value": 1000000,
+      "holdings": [
+        {
+          "stockSymbol": "INFY",
+          "weight": 50,
+          "sector": "IT"
+        },
+        {
+          "stockSymbol": "HDFCBANK",
+          "weight": 50,
+          "sector": "Banking"
+        }
+      ]
+    }
+  ]
+}
